@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lab1</string>
+    <string name="tmp"> </string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="divided">/</string>
+    <string name="multiply">*</string>
+    <string name="rez">Результат:</string>
+
+</resources>
