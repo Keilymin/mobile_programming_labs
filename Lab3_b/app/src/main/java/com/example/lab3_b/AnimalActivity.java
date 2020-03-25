@@ -18,6 +18,7 @@ public class AnimalActivity extends AppCompatActivity implements View.OnClickLis
     private TextView species;
     private TextView description;
     private ImageView image;
+    //животное что только что было выбрано
     private Animal animal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class AnimalActivity extends AppCompatActivity implements View.OnClickLis
         image = findViewById(R.id.animal_image);
 
         back.setOnClickListener(this);
-
+        //получаем животное с интент
         animal = (Animal) getIntent().getSerializableExtra("Animal");
         name.setText(animal.getName());
         species.setText(animal.getSpecies());

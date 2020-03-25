@@ -11,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lab3_a.entity.Animal;
 
-import java.io.Serializable;
-
 public class AnimalActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button back;
@@ -20,6 +18,7 @@ public class AnimalActivity extends AppCompatActivity implements View.OnClickLis
     private TextView species;
     private TextView description;
     private ImageView image;
+    //обьект животного на которого только то был проезведен клик
     private Animal animal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public class AnimalActivity extends AppCompatActivity implements View.OnClickLis
         image = findViewById(R.id.animal_image);
 
         back.setOnClickListener(this);
-
+// получаем животного на которого кликнули
         animal = (Animal) getIntent().getSerializableExtra("Animal");
         name.setText(animal.getName());
         species.setText(animal.getSpecies());

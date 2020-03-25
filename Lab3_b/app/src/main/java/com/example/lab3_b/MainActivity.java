@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
+    // массив животных
     private List<Animal> data;
     private RecyclerView rv;
     @Override
@@ -33,8 +34,9 @@ public class MainActivity extends AppCompatActivity  {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(layoutManager);
-
+        //подключили адаптер
         rv.setAdapter(new AnimalAdapter(data, this));
+        //добавили действие при клике на элемент
         rv.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, rv ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity  {
                 })
         );
     }
-
+    //создание массива животных
     private List<Animal>  createList(){
         List<Animal> list = new ArrayList<>();
 

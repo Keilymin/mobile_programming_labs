@@ -2,10 +2,15 @@ package com.example.lab3_b.entity;
 
 import java.io.Serializable;
 
+//Класс животных
 public class Animal implements Serializable {
+    //картинка животного
     private int image;
+    //имя
     private String name;
+    //класс
     private String species;
+    //описание
     private int description;
 
     public Animal(int image, String name, String species, int description) {

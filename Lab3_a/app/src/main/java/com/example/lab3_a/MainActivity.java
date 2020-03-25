@@ -14,12 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+    //список животных
     private List<Animal> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//создание массива животных
          data = createList();
         ListView list = findViewById(R.id.list);
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         list.setAdapter(adapter);
         list.setOnItemClickListener(this);
     }
-
+//добавляем животных в список
     private List<Animal>  createList(){
         List<Animal> list = new ArrayList<>();
 
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         return list;
     }
-
+//открытие новой вкладки при клике на элемент списка
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this,AnimalActivity.class);
