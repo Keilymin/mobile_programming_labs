@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.example.lab4_1.fragments.ThirdFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <fragment
+        android:id="@+id/fragment6"
+        android:name="com.example.lab4_1.fragments.FirstFragment"
+        android:layout_width="219dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment9"
+        app:layout_constraintEnd_toStartOf="@+id/fragment9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <fragment
+        android:id="@+id/fragment9"
+        android:name="com.example.lab4_1.fragments.SeconFragment"
+        android:layout_width="253dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment5"
+        app:layout_constraintEnd_toStartOf="@+id/fragment10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment6" />
+
+    <fragment
+        android:id="@+id/fragment10"
+        android:name="com.example.lab4_1.fragments.FourthFragment"
+        android:layout_width="234dp"
+        android:layout_height="333dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
